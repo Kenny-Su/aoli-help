@@ -149,6 +149,22 @@ strong { font-weight: 650; }
 
 .steps li:last-child { padding-bottom: 0; }
 
+/* --- screenshots --- */
+
+figure.shot {
+  margin: .875rem 0 .25rem;
+}
+
+figure.shot img {
+  display: block;
+  width: 100%;
+  max-width: 544px;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+}
+
 /* --- plain bullet lists --- */
 
 .list {
