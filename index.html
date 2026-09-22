@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IT 帮助中心</title>
+<title>IT Help Center</title>
 <link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="zh-CN" href="index.zh.html">
 </head>
 <body>
 <main>
-  <h1>IT 帮助中心</h1>
-  <p class="lede">常用系统的使用说明。</p>
+  <header class="page-header">
+  <nav class="language-switch" aria-label="Language"><a href="index.html" lang="en" aria-current="page">English</a><a href="index.zh.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></nav>
+  </header>
+  <h1>IT Help Center</h1>
+  <p class="lede">Company network and system guides.</p>
 
   <ul class="cards">
     <li>
-      <a href="erp/">
+      <a href="network/">
         <span>
-          <span class="title">ERP 登录指南</span>
-          <span class="desc">用浏览器 + 邮箱验证码登录 ERP</span>
+          <span class="title">Connect to Company Network</span>
+          <span class="desc">Use Tailscale to access internal systems</span>
         </span>
         <span class="chev" aria-hidden="true">→</span>
       </a>

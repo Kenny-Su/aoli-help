@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>连接公司内网 · IT 帮助中心</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="zh-CN" href="index.zh.html">
+</head>
+<body>
+<main>
+  <header class="page-header">
+  <a class="back" href="../index.zh.html">← IT 帮助中心</a>
+  <nav class="language-switch" aria-label="语言"><a href="index.html" lang="en" hreflang="en">English</a><a href="index.zh.html" lang="zh-CN" aria-current="page">简体中文</a></nav>
+  </header>
+  <article>
+    <h1>连接公司内网</h1>
+
+    <h2>准备</h2>
+    <p>电脑能上网，并有 <strong>@hw-etech.com.cn</strong> 公司邮箱。</p>
+
+    <h2>Windows 设置</h2>
+    <ol class="steps">
+      <li>安装并打开 <a href="https://tailscale.com/download/windows">Tailscale Windows 版</a>。</li>
+      <li>按 <strong>Windows 键</strong>，输入 <strong>PowerShell</strong>，打开 <strong>Windows PowerShell</strong>。粘贴以下命令并按<strong>回车</strong>：
+        <pre><code>tailscale login --login-server=https://headscale.ao-li.com</code></pre>
+        <figure class="shot">
+          <a href="images/login-command.png" target="_blank" rel="noopener"><img src="images/login-command.png" alt="PowerShell 显示登录命令和登录链接" loading="lazy" width="1734" height="927"></a>
+        </figure>
+      </li>
+      <li>按住 <strong>Ctrl</strong>，点击 PowerShell 中的登录链接。若无法打开，将完整链接复制到浏览器。然后在 <strong>auth.ao-li.com</strong> 使用公司邮箱登录。
+        <figure class="shot">
+          <a href="images/email-sign-in.png" target="_blank" rel="noopener"><img src="images/email-sign-in.png" alt="公司邮箱登录页面及 Continue 按钮" loading="lazy" width="2160" height="1368"></a>
+        </figure>
+      </li>
+      <li>确认设备和邮箱是自己的，点击 <strong>Confirm registration（确认注册）</strong>。
+        <figure class="shot">
+          <a href="images/confirm-registration.png" target="_blank" rel="noopener"><img src="images/confirm-registration.png" alt="Headscale 设备信息及 Confirm registration 确认注册按钮" loading="lazy" width="2160" height="1368"></a>
+        </figure>
+      </li>
+      <li>看到 <strong>Node registered（设备已注册）</strong> 后，关闭浏览器窗口。
+        <figure class="shot">
+          <a href="images/registration-success.png" target="_blank" rel="noopener"><img src="images/registration-success.png" alt="Headscale 显示 Node registered，设备注册成功" loading="lazy" width="2160" height="1368"></a>
+        </figure>
+      </li>
+      <li>返回 Tailscale，必要时点击 <strong>Connect（连接）</strong>，确认显示 <strong>Connected（已连接）</strong>。</li>
+    </ol>
+
+    <h2>检查连接</h2>
+    <p>Windows 用户在 PowerShell 中执行：</p>
+    <pre><code>tailscale ping 100.64.0.1</code></pre>
+    <p>收到 <code>pong</code> 表示可以连接到服务器。</p>
+
+    <h2>下次使用</h2>
+    <p>打开 Tailscale，在账号菜单中选择公司邮箱，必要时点击 <strong>Connect（连接）</strong>。使用公司系统期间保持连接。</p>
+
+    <h2>常见问题</h2>
+    <ul class="list">
+      <li><strong>找不到命令：</strong>确认 Tailscale 已安装并运行，再重新打开 PowerShell。</li>
+      <li><strong>登录页面不对：</strong>重新执行上面的完整登录命令。</li>
+      <li><strong>登录失败：</strong>使用公司邮箱，按提示完成邮箱验证。</li>
+      <li><strong>测试无响应：</strong>检查网络、登录邮箱和 Tailscale 连接状态。</li>
+      <li><strong>仍有问题：</strong>将错误提示和受影响的系统地址发给 IT。</li>
+    </ul>
+    <p class="foot"><a href="https://tailscale.com/docs/how-to/set-up-custom-control-server">Tailscale 连接参考</a></p>
+  </article>
+</main>
+</body>
+</html>

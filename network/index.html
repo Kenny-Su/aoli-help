@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect to Company Network · IT Help Center</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="alternate" hreflang="zh-CN" href="index.zh.html">
+</head>
+<body>
+<main>
+  <header class="page-header">
+  <a class="back" href="../">← IT Help Center</a>
+  <nav class="language-switch" aria-label="Language"><a href="index.html" lang="en" aria-current="page">English</a><a href="index.zh.html" lang="zh-CN" hreflang="zh-CN">简体中文</a></nav>
+  </header>
+  <article>
+    <h1>Connect to Company Network</h1>
+
+    <h2>What you need</h2>
+    <p>Internet access and a company email ending in <strong>@hw-etech.com.cn</strong>.</p>
+
+    <h2>Windows setup</h2>
+    <ol class="steps">
+      <li>Install and open <a href="https://tailscale.com/download/windows">Tailscale for Windows</a>.</li>
+      <li>Press the <strong>Windows key</strong>, type <strong>PowerShell</strong>, and open <strong>Windows PowerShell</strong>. Paste this command and press <strong>Enter</strong>:
+        <pre><code>tailscale login --login-server=https://headscale.ao-li.com</code></pre>
+        <figure class="shot">
+          <a href="images/login-command.png" target="_blank" rel="noopener"><img src="images/login-command.png" alt="PowerShell shows the login command and sign-in link" loading="lazy" width="1734" height="927"></a>
+        </figure>
+      </li>
+      <li>Hold <strong>Ctrl</strong> and click the login link shown in PowerShell. If it does not open, copy the full link into your browser. Then sign in with your company email at <strong>auth.ao-li.com</strong>.
+        <figure class="shot">
+          <a href="images/email-sign-in.png" target="_blank" rel="noopener"><img src="images/email-sign-in.png" alt="Company email sign-in page with Continue button" loading="lazy" width="2160" height="1368"></a>
+        </figure>
+      </li>
+      <li>Check that the device and email are yours, then click <strong>Confirm registration</strong>.
+        <figure class="shot">
+          <a href="images/confirm-registration.png" target="_blank" rel="noopener"><img src="images/confirm-registration.png" alt="Headscale device details and Confirm registration button" loading="lazy" width="2160" height="1368"></a>
+        </figure>
+      </li>
+      <li>When <strong>Node registered</strong> appears, close the browser window.
+        <figure class="shot">
+          <a href="images/registration-success.png" target="_blank" rel="noopener"><img src="images/registration-success.png" alt="Headscale confirms Node registered" loading="lazy" width="2160" height="1368"></a>
+        </figure>
+      </li>
+      <li>Return to Tailscale. Select <strong>Connect</strong> if needed, then check that it shows <strong>Connected</strong>.</li>
+    </ol>
+
+    <h2>Check the connection</h2>
+    <p>On Windows, run in PowerShell:</p>
+    <pre><code>tailscale ping 100.64.0.1</code></pre>
+    <p>A <code>pong</code> response means you can reach the server.</p>
+
+    <h2>Next time</h2>
+    <p>Open Tailscale, select your company email in the account menu, and click <strong>Connect</strong> if needed. Keep it connected while using company systems.</p>
+
+    <h2>Need help?</h2>
+    <ul class="list">
+      <li><strong>Command not found:</strong> Check that Tailscale is installed and running, then reopen PowerShell.</li>
+      <li><strong>Wrong sign-in page:</strong> Run the full login command above.</li>
+      <li><strong>Sign-in failed:</strong> Use your company email and complete any email verification.</li>
+      <li><strong>No response:</strong> Check your internet connection, sign-in email, and Tailscale connection status.</li>
+      <li><strong>Still stuck:</strong> Send IT the error message and affected service address.</li>
+    </ul>
+    <p class="foot"><a href="https://tailscale.com/docs/how-to/set-up-custom-control-server">Tailscale connection reference</a></p>
+  </article>
+</main>
+</body>
+</html>
