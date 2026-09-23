@@ -33,6 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 main { max-width: 46rem; margin: 0 auto; }
+.home { padding-top: 3rem; }
 .page-header {
   display: flex;
   align-items: center;
@@ -44,10 +45,8 @@ main { max-width: 46rem; margin: 0 auto; }
   border-bottom: 1px solid var(--line);
   font-size: .8125rem;
 }
-.language-switch { display: flex; gap: 1rem; margin-left: auto; }
 .page-header a { color: var(--muted); text-decoration: none; }
-.page-header a:hover, .language-switch a[aria-current="page"] { color: var(--fg); }
-.language-switch a[aria-current="page"] { font-weight: 600; }
+.page-header a:hover { color: var(--fg); }
 h1 {
   margin: 0 0 1rem;
   font-size: clamp(1.65rem, 4.5vw, 2rem);
