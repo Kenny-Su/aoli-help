@@ -14,9 +14,6 @@
   <article>
     <h1>连接公司内网</h1>
 
-    <h2>开始前</h2>
-    <p>请确认电脑可以上网，并准备好以 <strong>@hw-etech.com.cn</strong> 结尾的公司邮箱。</p>
-
     <h2>首次连接</h2>
     <ol class="steps">
       <li>下载并安装 <a href="https://tailscale.com/download/windows">Tailscale Windows 版</a>，安装完成后打开。</li>
@@ -26,7 +23,7 @@
           <a href="images/login-command.png" target="_blank" rel="noopener"><img src="images/login-command.png" alt="PowerShell 显示登录命令和登录链接" loading="lazy" width="1734" height="927"></a>
         </figure>
       </li>
-      <li>按住 <strong>Ctrl</strong>，点击 PowerShell 中显示的登录链接。如果打不开，就把完整链接复制到浏览器地址栏，按回车打开。在 <strong>auth.ao-li.com</strong> 页面输入公司邮箱，按提示登录。
+      <li>按住 <strong>Ctrl</strong>，点击 PowerShell 中显示的登录链接。如果打不开，就把完整链接复制到浏览器地址栏，按回车打开。在 <strong>auth.ao-li.com</strong> 页面输入 <strong>@hw-etech.com.cn</strong> 结尾的公司邮箱，按提示登录。
         <figure class="shot">
           <a href="images/email-sign-in.png" target="_blank" rel="noopener"><img src="images/email-sign-in.png" alt="公司邮箱登录页面及 Continue 按钮" loading="lazy" width="2160" height="1368"></a>
         </figure>
@@ -44,23 +41,9 @@
       <li>回到 Tailscale。如果还没连接，点击 <strong>Connect（连接）</strong>，直到显示 <strong>Connected（已连接）</strong>。</li>
     </ol>
 
-    <h2>确认是否连通</h2>
-    <p>在 PowerShell 中输入下面这行命令，按回车：</p>
-    <pre><code>tailscale ping 100.64.0.1</code></pre>
-    <p>看到 <code>pong</code> 回复，就说明已经连上服务器了。</p>
-
     <h2>下次使用</h2>
     <p>打开 Tailscale，在账号菜单中选择自己的公司邮箱。如果还没连接，点击 <strong>Connect（连接）</strong>。使用公司系统时，请保持 Tailscale 连接。</p>
 
-    <h2>常见问题</h2>
-    <ul class="list">
-      <li><strong>提示找不到命令：</strong>确认已安装并打开 Tailscale，再关掉 PowerShell，重新打开试试。</li>
-      <li><strong>登录页面不对：</strong>重新复制上面的完整登录命令，粘贴到 PowerShell 后按回车。</li>
-      <li><strong>登录失败：</strong>确认填写的是公司邮箱，并按页面提示完成邮箱验证。</li>
-      <li><strong>连接测试没有回复：</strong>确认电脑可以上网、登录的是公司邮箱，且 Tailscale 显示已连接。</li>
-      <li><strong>还是无法使用：</strong>把报错截图和打不开的系统地址发给 IT。</li>
-    </ul>
-    <p class="foot"><a href="https://tailscale.com/docs/how-to/set-up-custom-control-server">Tailscale 官方说明</a></p>
   </article>
 </main>
 </body>
