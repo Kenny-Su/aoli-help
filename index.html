@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IT 帮助中心</title>
-<link rel="stylesheet" href="style.css?v=2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AOLI IT 帮助中心：连接公司内网，访问 ERP，让工作顺畅开始。">
+  <title>IT 帮助中心 · AOLI</title>
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
-<main class="home">
-  <header class="home-header">AOLI / IT HELP</header>
-  <section class="home-intro">
-    <h1>IT 帮助中心</h1>
-  </section>
-  <h2 class="section-label">使用指南</h2>
-
-  <ul class="cards">
-    <li>
-      <a href="network/">
-        <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="6" rx="1.5"/><path d="M12 9v5M5 14h14M5 14v3M19 14v3"/><rect x="2" y="17" width="6" height="4" rx="1"/><rect x="16" y="17" width="6" height="4" rx="1"/></svg></span>
-        <span>
-          <span class="title">连接公司内网</span>
-          <span class="desc">用 Tailscale 连接后，即可访问公司内部系统</span>
-        </span>
-        <span class="chev" aria-hidden="true">→</span>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="AOLI IT 帮助中心首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 27 14 5h5l-4 9-6 13zm13-11 5-11 7 22h-6l-3-11z" fill="currentColor"/></svg>
+        <span>AOLI</span><span class="brand-divider" aria-hidden="true"></span><span class="brand-caption">IT 帮助中心</span>
       </a>
-    </li>
-    <li>
-      <a href="erp/">
-        <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12M13 13h4M13 17h4"/></svg></span>
-        <span>
-          <span class="title">访问 ERP</span>
-          <span class="desc">连接 Tailscale 后，访问畅捷通 T+</span>
-        </span>
-        <span class="chev" aria-hidden="true">→</span>
-      </a>
-    </li>
-  </ul>
-  <footer class="home-footer">公司内部服务 · 使用前请连接 Tailscale</footer>
-</main>
+      <nav class="header-nav" aria-label="主导航">
+        <a href="#guides">使用指南</a>
+        <a class="nav-button" href="erp/">访问 ERP <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main class="home container" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> YOUR WORK, CONNECTED</p>
+      <h1 id="hero-title">连接就绪，<span>工作继续。</span></h1>
+      <p class="hero-description">从连接公司内网，到访问业务系统。<br>你需要的使用指南，都在这里。</p>
+      <a class="hero-link" href="network/">第一次使用？从这里开始 <span aria-hidden="true">↗</span></a>
+    </section>
+    <section class="guides" id="guides" aria-labelledby="guides-title">
+      <div class="section-heading"><h2 id="guides-title">使用指南</h2><span>两个步骤，开始工作</span></div>
+      <div class="guide-grid">
+        <a class="guide-card" href="network/">
+          <div class="card-topline"><span class="card-category">01 <span>/</span> 网络连接</span><span class="tag">首次使用</span></div>
+          <div class="card-visual network-visual" aria-hidden="true">
+            <div class="network-node"><div class="node-icon"><svg viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="15" rx="2"/><path d="M3 25h26M12 21v4m8-4v4"/></svg></div><span>你的设备</span></div>
+            <div class="connection-line"><span></span></div>
+            <div class="network-node central-node"><div class="node-icon tailscale-icon"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>Tailscale</span></div>
+            <div class="connection-line"><span></span></div>
+            <div class="network-node"><div class="node-icon"><svg viewBox="0 0 32 32"><rect x="8" y="4" width="16" height="24" rx="2"/><path d="M12 10h8m-8 6h8m-8 6h4"/></svg></div><span>公司内网</span></div>
+          </div>
+          <div class="card-content"><h3>连接公司内网</h3><p>设置 Tailscale，让你的设备连接公司内部网络。</p></div>
+          <div class="card-bottom"><span>查看连接指南</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+        </a>
+        <a class="guide-card" href="erp/">
+          <div class="card-topline"><span class="card-category">02 <span>/</span> 业务系统</span><span class="tag">连接后访问</span></div>
+          <div class="card-visual erp-visual" aria-hidden="true">
+            <div class="app-window">
+              <div class="window-toolbar"><span class="window-dots"><i></i><i></i><i></i></span><span>WORKSPACE</span><span class="window-square"></span></div>
+              <div class="window-body"><div class="app-symbol">T<span>+</span></div><div class="app-detail"><strong>畅捷通 T+</strong><span>公司业务，从这里进入</span></div><span class="app-open">↗</span></div>
+            </div>
+          </div>
+          <div class="card-content"><h3>访问 ERP</h3><p>连接内网后，登录畅捷通 T+，开始日常工作。</p></div>
+          <div class="card-bottom"><span>查看访问指南</span><span class="arrow-circle" aria-hidden="true">↗</span></div>
+        </a>
+      </div>
+    </section>
+    <aside class="home-note">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg>
+      <p><strong>使用公司系统时，请保持 Tailscale 连接。</strong><span>已完成首次设置？下次打开 Tailscale 即可。</span></p>
+      <a href="network/#next-time">日常使用 <span aria-hidden="true">→</span></a>
+    </aside>
+  </main>
+  <footer class="site-footer container"><span>AOLI <span class="footer-slash">/</span> IT HELP CENTER</span><span>公司内部使用</span></footer>
 </body>
 </html>

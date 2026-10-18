@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>连接公司内网 · IT 帮助中心</title>
-<link rel="stylesheet" href="../style.css?v=2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>连接公司内网 · IT 帮助中心</title>
+  <link rel="stylesheet" href="../style.css?v=3">
+  <script src="../script.js?v=3" defer></script>
 </head>
 <body>
-<main>
-  <header class="page-header">
-  <a class="back" href="../">← IT 帮助中心</a>
-  </header>
-  <article>
-    <h1>连接公司内网</h1>
-
-    <h2>首次连接</h2>
-    <ol class="steps">
-      <li>下载并安装 <a href="https://tailscale.com/download/windows">Tailscale Windows 版</a>，安装完成后打开。</li>
-      <li>按下 <strong>Windows 键</strong>，搜索并打开 <strong>Windows PowerShell</strong>。复制下面这行命令，粘贴后按<strong>回车</strong>：
-        <pre><code>tailscale login --login-server=https://headscale.ao-li.com</code></pre>
-        <figure class="shot">
-          <a href="images/login-command.png" target="_blank" rel="noopener"><img src="images/login-command.png" alt="PowerShell 显示登录命令和登录链接" loading="lazy" width="1734" height="927"></a>
-        </figure>
-      </li>
-      <li>按住 <strong>Ctrl</strong>，点击 PowerShell 中显示的登录链接。如果打不开，就把完整链接复制到浏览器地址栏，按回车打开。在 <strong>auth.ao-li.com</strong> 页面输入以 <strong>@hw-etech.com.cn</strong> 或 <strong>@snet-sh.com</strong> 结尾的公司邮箱，按提示登录。
-        <figure class="shot">
-          <a href="images/email-sign-in.png" target="_blank" rel="noopener"><img src="images/email-sign-in.png" alt="公司邮箱登录页面及 Continue 按钮" loading="lazy" width="2160" height="1368"></a>
-        </figure>
-      </li>
-      <li>确认页面上的设备和邮箱都是自己的，再点击 <strong>Confirm registration（确认注册）</strong>。
-        <figure class="shot">
-          <a href="images/confirm-registration.png" target="_blank" rel="noopener"><img src="images/confirm-registration.png" alt="Headscale 设备信息及 Confirm registration 确认注册按钮" loading="lazy" width="2160" height="1368"></a>
-        </figure>
-      </li>
-      <li>看到 <strong>Node registered（设备已注册）</strong>，就可以关闭这个页面了。
-        <figure class="shot">
-          <a href="images/registration-success.png" target="_blank" rel="noopener"><img src="images/registration-success.png" alt="Headscale 显示 Node registered，设备注册成功" loading="lazy" width="2160" height="1368"></a>
-        </figure>
-      </li>
-      <li>回到 Tailscale。如果还没连接，点击 <strong>Connect（连接）</strong>，直到显示 <strong>Connected（已连接）</strong>。</li>
-    </ol>
-
-    <h2>下次使用</h2>
-    <p>打开 Tailscale 即可。使用公司系统时，请保持 Tailscale 连接。</p>
-    <p>连接成功后，请稍等片刻再访问公司系统。如果暂时打不开，请稍后刷新页面重试。</p>
-
-  </article>
-</main>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header"><div class="header-inner">
+      <a class="brand" href="../" aria-label="AOLI IT 帮助中心首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 27 14 5h5l-4 9-6 13zm13-11 5-11 7 22h-6l-3-11z" fill="currentColor"/></svg>
+        <span>AOLI</span><span class="brand-divider" aria-hidden="true"></span><span class="brand-caption">IT 帮助中心</span>
+      </a>
+      <nav class="header-nav" aria-label="主导航"><a href="../#guides">使用指南</a><a class="nav-button" href="../erp/">访问 ERP <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <div class="docs-layout container">
+    <aside class="docs-sidebar">
+      <a class="back-link" href="../"><span aria-hidden="true">←</span> 返回帮助中心</a>
+      <p class="sidebar-label">使用指南</p>
+      <nav class="sidebar-nav" aria-label="使用指南">
+        <a href="../network/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="3" width="8" height="6" rx="1.5"/><path d="M12 9v5M5 14h14M5 14v4M19 14v4"/><rect x="2" y="18" width="6" height="3" rx="1"/><rect x="16" y="18" width="6" height="3" rx="1"/></svg>连接公司内网</a>
+        <a href="../erp/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></svg>访问 ERP</a>
+      </nav>
+      <nav class="toc" aria-label="本页目录"><span>本页内容</span><a href="#first-time">首次连接</a><a href="#next-time">下次使用</a></nav>
+    </aside>
+    <main class="guide-article" id="main">
+      <nav class="breadcrumbs" aria-label="面包屑导航"><a href="../">帮助中心</a><span aria-hidden="true">/</span><span aria-current="page">连接公司内网</span></nav>
+      <article>
+        <header class="article-header">
+          <p class="eyebrow">01 / NETWORK</p><h1>连接公司内网</h1>
+          <p class="lede">完成一次设置，之后每次打开 Tailscale，就能连接公司网络。</p>
+          <div class="article-meta"><span class="tag">Windows</span><span class="tag">首次设置 · 6 个步骤</span></div>
+        </header>
+        <aside class="callout"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg><p><strong>开始前，准备好你的公司邮箱。</strong>请使用以 @hw-etech.com.cn 或 @snet-sh.com 结尾的邮箱登录。</p></aside>
+        <section class="guide-section" id="first-time" aria-labelledby="first-time-title">
+          <h2 id="first-time-title">首次连接</h2>
+          <ol class="steps">
+            <li><h3>安装 Tailscale</h3><p>下载 Windows 版 Tailscale，安装完成后打开。</p><a class="button" href="https://tailscale.com/download/windows" target="_blank" rel="noopener">下载 Tailscale <span aria-hidden="true">↗</span></a></li>
+            <li><h3>运行连接命令</h3><p>按下 <strong>Windows 键</strong>，搜索并打开 <strong>Windows PowerShell</strong>。复制下面这行命令，粘贴后按<strong>回车</strong>。</p>
+              <div class="code-block"><div class="code-toolbar"><span>Windows PowerShell</span><button class="copy-button" type="button" data-copy-target="login-command" aria-label="复制 Tailscale 登录命令" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg><span>复制</span></button></div><pre><code id="login-command">tailscale login --login-server=https://headscale.ao-li.com</code></pre></div>
+              <span class="copy-feedback" id="login-command-feedback" role="status" aria-live="polite"></span>
+              <details class="screenshot-details"><summary>查看操作截图</summary><figure class="shot"><a href="images/login-command.png" target="_blank" rel="noopener"><img src="images/login-command.png" alt="PowerShell 显示登录命令和登录链接（点击在新标签页查看大图）" loading="lazy" width="1734" height="927"></a></figure></details>
+            </li>
+            <li><h3>使用公司邮箱登录</h3><p>按住 <strong>Ctrl</strong>，点击 PowerShell 中显示的登录链接。如果打不开，就把完整链接复制到浏览器地址栏，按回车打开。</p><p>在 <strong>auth.ao-li.com</strong> 页面输入以 <strong>@hw-etech.com.cn</strong> 或 <strong>@snet-sh.com</strong> 结尾的公司邮箱，按提示登录。</p>
+              <details class="screenshot-details"><summary>查看操作截图</summary><figure class="shot"><a href="images/email-sign-in.png" target="_blank" rel="noopener"><img src="images/email-sign-in.png" alt="公司邮箱登录页面及 Continue 按钮（点击在新标签页查看大图）" loading="lazy" width="2160" height="1368"></a></figure></details>
+            </li>
+            <li><h3>确认设备注册</h3><p>确认页面上的设备和邮箱都是自己的，再点击 <strong>Confirm registration（确认注册）</strong>。</p>
+              <details class="screenshot-details"><summary>查看操作截图</summary><figure class="shot"><a href="images/confirm-registration.png" target="_blank" rel="noopener"><img src="images/confirm-registration.png" alt="Headscale 设备信息及 Confirm registration 确认注册按钮（点击在新标签页查看大图）" loading="lazy" width="2160" height="1368"></a></figure></details>
+            </li>
+            <li><h3>完成注册</h3><p>看到 <strong>Node registered（设备已注册）</strong>，就可以关闭这个页面了。</p>
+              <details class="screenshot-details"><summary>查看操作截图</summary><figure class="shot"><a href="images/registration-success.png" target="_blank" rel="noopener"><img src="images/registration-success.png" alt="Headscale 显示 Node registered，设备注册成功（点击在新标签页查看大图）" loading="lazy" width="2160" height="1368"></a></figure></details>
+            </li>
+            <li><h3>确认连接成功</h3><p>回到 Tailscale。如果还没连接，点击 <strong>Connect（连接）</strong>，直到显示 <strong>Connected（已连接）</strong>。</p></li>
+          </ol>
+        </section>
+        <section class="guide-section next-time" id="next-time" aria-labelledby="next-time-title">
+          <h2 id="next-time-title">下次使用</h2><p>打开 Tailscale 即可。使用公司系统时，请保持 Tailscale 连接。</p><p>连接成功后，请稍等片刻再访问公司系统。如果暂时打不开，请稍后刷新页面重试。</p>
+        </section>
+        <a class="next-guide" href="../erp/"><span><small>连接完成，下一步</small><strong>访问 ERP</strong></span><span aria-hidden="true">→</span></a>
+      </article>
+    </main>
+  </div>
+  <footer class="site-footer container"><span>AOLI <span class="footer-slash">/</span> IT HELP CENTER</span><span>公司内部使用</span></footer>
 </body>
 </html>

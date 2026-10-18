@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>访问 ERP · IT 帮助中心</title>
-<link rel="stylesheet" href="../style.css?v=2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>访问 ERP · IT 帮助中心</title>
+  <link rel="stylesheet" href="../style.css?v=3">
+  <script src="../script.js?v=3" defer></script>
 </head>
 <body>
-<main>
-  <header class="page-header">
-    <a class="back" href="../">← IT 帮助中心</a>
-  </header>
-  <article>
-    <h1>访问 ERP</h1>
-    <ol class="steps">
-      <li>确认已连接到 Tailscale。首次使用请先按照<a href="../network/">连接公司内网</a>完成设置。</li>
-      <li>点击 <a href="http://100.64.0.1">http://100.64.0.1</a>，打开畅捷通 T+ 登录页面。</li>
-      <li>使用自己的 ERP 账号和密码登录。使用期间请保持 Tailscale 连接。</li>
-    </ol>
-  </article>
-</main>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header"><div class="header-inner">
+      <a class="brand" href="../" aria-label="AOLI IT 帮助中心首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 27 14 5h5l-4 9-6 13zm13-11 5-11 7 22h-6l-3-11z" fill="currentColor"/></svg>
+        <span>AOLI</span><span class="brand-divider" aria-hidden="true"></span><span class="brand-caption">IT 帮助中心</span>
+      </a>
+      <nav class="header-nav" aria-label="主导航"><a href="../#guides">使用指南</a><a class="nav-button" href="../erp/">访问 ERP <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <div class="docs-layout container">
+    <aside class="docs-sidebar">
+      <a class="back-link" href="../"><span aria-hidden="true">←</span> 返回帮助中心</a>
+      <p class="sidebar-label">使用指南</p>
+      <nav class="sidebar-nav" aria-label="使用指南">
+        <a href="../network/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="3" width="8" height="6" rx="1.5"/><path d="M12 9v5M5 14h14M5 14v4M19 14v4"/><rect x="2" y="18" width="6" height="3" rx="1"/><rect x="16" y="18" width="6" height="3" rx="1"/></svg>连接公司内网</a>
+        <a href="../erp/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 9v12"/></svg>访问 ERP</a>
+      </nav>
+      <nav class="toc" aria-label="本页目录"><span>本页内容</span><a href="#open-erp">系统入口</a><a href="#login-steps">登录步骤</a></nav>
+    </aside>
+    <main class="guide-article" id="main">
+      <nav class="breadcrumbs" aria-label="面包屑导航"><a href="../">帮助中心</a><span aria-hidden="true">/</span><span aria-current="page">访问 ERP</span></nav>
+      <article>
+        <header class="article-header"><p class="eyebrow">02 / WORKSPACE</p><h1>访问 ERP</h1><p class="lede">连接公司内网后，登录畅捷通 T+，开始日常工作。</p></header>
+        <section class="service-panel" id="open-erp" aria-labelledby="service-title">
+          <div class="service-heading"><div class="app-symbol" aria-hidden="true">T<span>+</span></div><div><h2 id="service-title">畅捷通 T+</h2><p>公司 ERP 系统</p></div><span class="tag">需连接 Tailscale</span></div>
+          <div class="service-address"><a href="http://100.64.0.1" target="_blank" rel="noopener"><code id="erp-address">http://100.64.0.1</code></a><button class="copy-button" type="button" data-copy-target="erp-address" aria-label="复制 ERP 地址" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg><span>复制</span></button></div>
+          <span class="copy-feedback" id="erp-address-feedback" role="status" aria-live="polite"></span>
+          <div class="service-actions"><a class="button button-primary" href="http://100.64.0.1" target="_blank" rel="noopener">打开 ERP <span aria-hidden="true">↗</span></a><span>在新标签页中打开</span></div>
+        </section>
+        <section class="guide-section" id="login-steps" aria-labelledby="login-steps-title">
+          <h2 id="login-steps-title">登录步骤</h2>
+          <ol class="steps">
+            <li><h3>连接公司内网</h3><p>确认 Tailscale 显示 <strong>Connected（已连接）</strong>。首次使用请先按照<a href="../network/">连接公司内网</a>完成设置。</p></li>
+            <li><h3>打开 ERP</h3><p>点击上方「打开 ERP」，或在浏览器中访问 <a href="http://100.64.0.1" target="_blank" rel="noopener">http://100.64.0.1</a>，进入畅捷通 T+ 登录页面。</p></li>
+            <li><h3>登录你的账号</h3><p>使用自己的 ERP 账号和密码登录。使用期间请保持 Tailscale 连接。</p></li>
+          </ol>
+        </section>
+        <aside class="callout"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></svg><p><strong>页面暂时打不开？</strong>请先确认 Tailscale 已连接，稍等片刻后刷新页面重试。</p></aside>
+        <a class="next-guide" href="../network/"><span><small>需要设置网络？</small><strong>查看内网连接指南</strong></span><span aria-hidden="true">→</span></a>
+      </article>
+    </main>
+  </div>
+  <footer class="site-footer container"><span>AOLI <span class="footer-slash">/</span> IT HELP CENTER</span><span>公司内部使用</span></footer>
 </body>
 </html>
