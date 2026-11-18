@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>连接公司内网 · IT 帮助中心</title>
-  <link rel="stylesheet" href="../style.css?v=3">
+  <link rel="stylesheet" href="../style.css?v=4">
   <script src="../script.js?v=3" defer></script>
 </head>
 <body>
@@ -53,7 +53,11 @@
             <li><h3>完成注册</h3><p>看到 <strong>Node registered（设备已注册）</strong>，就可以关闭这个页面了。</p>
               <details class="screenshot-details"><summary>查看操作截图</summary><figure class="shot"><a href="images/registration-success.png" target="_blank" rel="noopener"><img src="images/registration-success.png" alt="Headscale 显示 Node registered，设备注册成功（点击在新标签页查看大图）" loading="lazy" width="2160" height="1368"></a></figure></details>
             </li>
-            <li><h3>确认连接成功</h3><p>回到 Tailscale。如果还没连接，点击 <strong>Connect（连接）</strong>，直到显示 <strong>Connected（已连接）</strong>。</p></li>
+            <li>
+              <h3>确认连接成功</h3>
+              <p>回到 Tailscale。如果还没连接，点击 <strong>Connect（连接）</strong>，直到显示 <strong>Connected（已连接）</strong>。</p>
+              <p>在 PowerShell 运行 <code class="inline-command">tailscale ping 100.64.0.1</code>，查看回复末尾的往返延迟（毫秒）。</p>
+            </li>
           </ol>
         </section>
         <section class="guide-section next-time" id="next-time" aria-labelledby="next-time-title">
